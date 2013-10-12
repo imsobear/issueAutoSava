@@ -9,9 +9,7 @@
     padding: 50px;
     box-shadow: 0 0 5px #999;
     text-align: center;
-}
-.layer-hide {
-    display: none !important;
+    display: none;
 }
 
 .leave-layer p {

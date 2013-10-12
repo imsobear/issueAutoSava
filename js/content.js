@@ -11,7 +11,7 @@ window.onload = function() {
     staySpan.innerHTML = '继续编辑';
     leaveSpan.innerHTML = '离开页面';
 
-    layer.classList.add('leave-layer', 'layer-hide');
+    layer.classList.add('leave-layer');
     layer.appendChild(p);
     layer.appendChild(leaveSpan);
     layer.appendChild(staySpan);
@@ -29,9 +29,10 @@ window.onload = function() {
         var isFocused = doc.querySelector('#write_bucket_').classList.contains('focused'),
             isSubmit = !doc.querySelector('.button.primary:disabled'),
             idSubmitComment = doc.querySelector('.js-comment-and-button'),
-            isSth = !!doc.querySelector('#issue_body').value;
+            isSth = !!doc.querySelector('#issue_body').value,
+            isComment = !!doc.querySelector('.js-comment-field').value;
 
-        if (isFocused || isSubmit || idSubmitComment || isSth) {
+        if (isFocused || isSubmit || idSubmitComment || isSth || isComment) {
             
             return '您正在编辑的 issue 还没有提交，确定要离开？';
 
