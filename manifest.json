@@ -10,5 +10,12 @@
     },
     "permissions": [
         "<all_urls>","storage","clipboardWrite"
+    ],
+    "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": ["css/content.css"],
+      "js": ["js/content.js"]
+    }
     ]
 }
