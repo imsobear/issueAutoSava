@@ -1,0 +1,41 @@
+.leave-layer {
+    font: 16px "Microsoft Yahei";
+    width: 340px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -200px;
+    padding: 50px;
+    box-shadow: 0 0 5px #999;
+    text-align: center;
+}
+.layer-hide {
+    display: none !important;
+}
+
+.leave-layer p {
+    margin-top: 0;
+}
+
+.leave-layer span {
+    display: inline-block;
+    color: #fff;
+    background-color: #96D986;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.leave-layer .layer-leave {
+    margin-right: 40px;
+    background-color: #aaa;
+}
+
+.layer-stay:hover {
+    background-color: #87c378;
+}
+.layer-leave:hover {
+    background-color: #bbb;
+}
+
