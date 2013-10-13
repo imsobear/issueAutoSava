@@ -19,5 +19,13 @@
 
     <p class="main">A chrome extension to save your github issue automatically!</p>
 
+    <script>
+        var main = document.querySelector('.main');
+
+        chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+            main.innerHTML = request;
+            sendResponse({});
+        });
+    </script>
 </body>
 </html>

@@ -12,10 +12,16 @@
         "<all_urls>","storage","clipboardWrite"
     ],
     "content_scripts": [
-    {
-      "matches": ["https://github.com/*"],
-      "css": ["css/content.css"],
-      "js": ["js/content.js"]
-    }
+        {
+        "matches": [
+            "file:///*/*",
+            "http://*/*",
+            "https://*/*"
+        ],
+        "css": ["css/content.css"],
+        "js": ["js/content.js"],
+        "run_at": "document_end",
+        "all_frames": true
+        }
     ]
 }
