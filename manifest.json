@@ -9,7 +9,7 @@
         "default_popup": "popup.html"
     },
     "permissions": [
-        "<all_urls>","storage","clipboardWrite"
+        "https://github.com/*"
     ],
     "content_scripts": [
     {
