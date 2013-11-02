@@ -1,12 +1,18 @@
 issueAutoSava
 =============
 
-自动保存 issue 的浏览器插件
+在github的issue里写文章时，有时候会误操作关闭页面，写的东西也没有保存，所以就想着写个chrome的插件解决这个问题。
+
+初始想法是利用本地存储，监听`textfield`的`input`事件将内容自动保存，后来觉得仅仅是为了解决上面的问题完全不用这么复杂，
+现在的方案是在页面关闭时做一次提醒是否要关闭，核心主要是利用js的`beforeunload`事件：
+
+```javascript
+window.addEventListener('beforeunload', function (e) {
+       return '您正在编辑的 issue 还没有提交，确定要离开？';
+});
+```
+
+关于这个事件，也做了一点研究，具体见[JavaScript 阻止页面关闭](https://github.com/tomayday/MyBlog/issues/28)。
 
 
--------
-
-目前已完成基本功能，原计划是在issue中键入内容时将内容自动保存的插件的`pop.html`里面，然后觉得这个要交换数据，有点麻烦，所以就换了一种思路，
-当页面的issue里有内容，或者是按钮处于可提交状态时，如果关闭或者刷新页面时弹窗提示，目前有个bug，提交issue时因为页面跳转所以也会弹窗，这一块后续一定要改。
-
-如果有时间会按照第一个思路继续做～～～
+--over--
